@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/input.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="font-custom bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 text-gray-800 dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-900 dark:to-black dark:text-gray-200 transition duration-300"
+  >
+    <!-- Navbar -->
+    <header class="w-full bg-white shadow-md dark:bg-gray-900 fixed top-0 z-50">
+      <nav class="flex justify-between items-center px-8 py-4">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <div class="text-2xl font-bold text-orange-500">Sahil</div>
+          <div class="text-lg font-semibold border-l-2 border-orange-500 pl-2">
+            Portfolio
+          </div>
+        </div>
+
+        <!-- Navigation Links (Desktop Only) -->
+        <div id="nav-links" class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-orange-500 transition duration-300 hover:border-b-[1px] border-orange-500 px-1 py-1">Home</a>
+          <a href="#about" class="hover:text-orange-500 transition duration-200 hover:border-b-[1px] border-orange-500 py-1">About</a>
+          <a href="#expertise" class="hover:text-orange-500 transition duration-200 hover:border-b-[1px] border-orange-500 py-1">Expertise</a>
+          <a href="#projects" class="hover:text-orange-500 transition duration-200 hover:border-b-[1px] border-orange-500 py-1">Works</a>
+          <a href="#contact" class="hover:text-orange-500 transition duration-200 hover:border-b-[1px] border-orange-500 py-1">Contact</a>
+        </div>
+
+        <!-- Social Links & Resume with Hamburger (Mobile) -->
+        <div class="flex items-end space-x-4">
+          <!-- Social Links -->
+          <a href="mailto:sahilcc125@gmail.com" class="hover:text-orange-500 text-lg sm:text-xl lg:text-2xl"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://github.com/itsmesj" target="_blank" class="hover:text-orange-600 text-lg sm:text-xl lg:text-2xl"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sahil-sharma-codes" target="_blank" class="hover:text-orange-500 text-lg sm:text-xl lg:text-2xl"><i class="fa-brands fa-linkedin"></i></a>
+          <!-- Resume Button -->
+          <a href="assets/docs/resume.pdf" download class="border-2 border-orange-500 text-white px-3 py-1 rounded-full bg-orange-600  hover:scale-105 transition-transform duration-200 font-semibold hover:border-white">
+            Resume
+          </a>
+          <!-- Hamburger Menu Icon (Mobile Only) -->
+          <button id="hamburger" class="md:hidden text-orange-500 text-2xl">
+            <i id="hamburger-icon" class="fa-solid fa-bars"></i> <!-- Hamburger icon -->
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 p-4">
+        <div class="space-y-4">
+          <a href="#home" class="block text-lg text-gray-800 dark:text-gray-100 hover:text-orange-500   transition duration-200">Home</a>
+          <a href="#about" class="block text-lg text-gray-800 dark:text-gray-100 hover:text-orange-500 transition duration-200">About</a>
+          <a href="#expertise" class="block text-lg text-gray-800 dark:text-gray-100 hover:text-orange-500 transition duration-200">Expertise</a>
+          <a href="#projects" class="block text-lg text-gray-800 dark:text-gray-100 hover:text-orange-500 transition duration-200">Works</a>
+          <a href="#contact" class="block text-lg text-gray-800 dark:text-gray-100 hover:text-orange-500 transition duration-200">Contact</a>
+        </div>
+      </div>
+    </header>
+
+ 
+
+
+    <!-- Hero Section -->
+    <section id = "home"
+      class="w-full min-h-screen flex flex-col items-center justify-center bg-gradient-to-tr from-gray-100 via-white to-gray-200 dark:from-gray-700 dark:via-gray-900 dark:to-black px-8 pt-20"
+    >
+
+      <!-- Hero Content -->
+      <div class="text-center max-w-3xl">
+        <h1 class="text-5xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+          Welcome to My Portfolio
+        </h1>
+        <h2 class="text-4xl font-semibold mb-6 text-orange-500 mt-10">
+          Hi, I'm Sahil Sharma
+        </h2>
+        <p class="text-lg mb-8 text-gray-600 dark:text-gray-400">
+          A passionate
+          <span class="font-semibold">Full Stack Developer</span> and
+          <span class="font-semibold">Software Engineer</span> creating
+          impactful digital experiences. Let's build something extraordinary
+          together!
+        </p>
+        <a
+          href="#contact"
+          class="border-2 border-orange-500 font-semibold text-white px-6 py-3 rounded-full bg-orange-600 transition:transform duration-300  hover:border-[1px] hover:border-white shadow-lg"
+        >
+          Get In Touch
+        </a>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="w-full py-20 bg-gray-100 dark:bg-gray-900 px-8">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center">
+        <!-- Photo Section -->
+        <div class="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+          <div
+            class="relative w-72 h-72 rounded-full overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300 hover:border-[1px] border-gray-100"
+          >
+            <img
+              src="/assets/logo/logo.jpg"
+              alt="Sahil Sharma"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- Description Section -->
+        <div class="w-full md:w-1/2 text-center md:text-left">
+          <h2 class="text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200">
+            About Me
+          </h2>
+          <p
+            class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6"
+          >
+            Hello! I'm
+            <span class="font-semibold text-orange-500">Sahil Sharma</span>, a
+            driven <span class="font-semibold">Full Stack Developer</span> with
+            a Master's degree in Computer Applications from JIMS, Rohini, Delhi.
+            I have a strong foundation in development technologies, including
+            <span class="font-semibold">React.js, Node.js, MongoDB</span>, and
+            more. I specialize in building scalable and dynamic web
+            applications.
+          </p>
+          <p
+            class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6"
+          >
+            My journey into technology includes publishing a research paper
+            titled
+            <em
+              >"Object Detection and Age, Gender Estimation using Deep
+              Learning"</em
+            >, reflecting my passion for AI and computer vision. With expertise
+            in programming, cloud computing, and cybersecurity, I aim to craft
+            innovative solutions that make a difference.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            When I'm not coding, I enjoy exploring cutting-edge technologies and
+            mentoring others to succeed in their tech careers. Let's connect and
+            create something impactful together!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="expertise" class="py-16 bg-gray-100 dark:bg-gray-800">
+      <div class="max-w-7xl mx-auto px-8">
+        <!-- Section Heading -->
+        <h2
+          class="text-4xl font-bold text-center text-orange-500 dark:text-orange-400 mb-10"
+        >
+          My Expertise
+        </h2>
+
+        <!-- Domains of Expertise -->
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center mb-16"
+        >
+          <div
+            class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:scale-110 transition-transform duration-300"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white mb-2"
+            >
+              Full Stack Development
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Building interactive and scalable web applications using MERN
+              stack and more.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:scale-110 transition-transform duration-300"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white mb-2"
+            >
+              Software Development
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Crafting robust and efficient software solutions for diverse
+              business needs.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:scale-110 transition-transform duration-300"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white mb-2"
+            >
+              Data Analytics
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Uncovering insights using advanced analytics tools and algorithms.
+            </p>
+          </div>
+          <div
+            class="p-6 bg-white rounded-lg shadow-md dark:bg-gray-900 hover:scale-110 transition-transform duration-300"
+          >
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-white mb-2"
+            >
+              Artificial Intelligence
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Exploring intelligent solutions with deep learning and AI
+              techniques.
+            </p>
+          </div>
+        </div>
+
+        <!-- Skills Showcase -->
+        <h3
+          class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-10"
+        >
+          My Skill Set
+        </h3>
+        <div
+          class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 text-center"
+        >
+          <!-- Skill Icons -->
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+              alt="Java"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">Java</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">Python</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+              alt="MySQL"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">MySQL</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt="React.js"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">
+              React.js
+            </p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt="Node.js"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">Node.js</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+              alt="Express.js"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">
+              Express.js
+            </p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
+              alt="C++"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">C++</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"
+              alt="C"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">C</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg"
+              alt="Linux"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">Linux</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+              alt="MongoDB"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">MongoDB</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt="HTML"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">HTML</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt="CSS"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">CSS</p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">
+              JavaScript
+            </p>
+          </div>
+          <div class="p-4 hover:scale-125 transition-transform duration-300">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg"
+              alt="Tailwind CSS"
+              class="w-16 h-16 mx-auto"
+            />
+            <p class="mt-2 text-gray-700 dark:text-gray-300 text-xl">
+              Tailwind CSS
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-900">
+      <div class="container mx-auto px-4">
+        <h2
+          class="text-4xl font-bold text-center text-gray-800 dark:text-orange-500 mb-10"
+        >
+          My Works
+        </h2>
+
+        <!-- Project Selection -->
+        <div class="flex justify-center space-x-4 mb-10">
+          <button id="vids-btn"
+            class="project-tab px-4 py-2 text-lg font-semibold text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all hover:rounded-md"
+            onclick="selectProject('video-streaming'); projectActive('video-streaming')"
+          >
+            Video Streaming App
+          </button>
+          <button id="obj-btn"
+            class="project-tab px-4 py-2 text-lg font-semibold text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all hover:rounded-md mx-4"
+            onclick="selectProject('object-detection'); projectActive('object-detection')"
+          >
+            Object Detection
+          </button>
+          <button id="gops-btn"
+            class="project-tab px-4 py-2 text-lg font-semibold text-gray-800 dark:text-gray-100 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all hover:rounded-md mx-10"
+            onclick="selectProject('groceryops'); projectActive('groceryops')"
+          >
+            GroceryOps
+          </button>
+        </div>
+
+        <!-- Project Details -->
+        <div id="project-details" class="text-center">
+          <!-- Image Carousel -->
+          <div id="carousel" class="relative w-full max-w-6xl mx-auto mb-6">
+            <div
+              id="carousel-images"
+              class="flex overflow-hidden rounded-lg h-[24rem] bg-gray-300 dark:bg-gray-700"
+            >
+              <p
+                class="text-gray-600 dark:text-gray-100 m-auto text-2xl font-semibold"
+              >
+                Select a project to view its snapshots
+              </p>
+            </div>
+
+            <!-- Left Navigation -->
+            <button
+              id="prev-btn"
+              class="mx-2 absolute hover:scale-110 transition-transform duration-200 left-0 top-1/2 transform -translate-y-1/2 bg-gray-600 dark:bg-gray-500 text-white p-2 rounded-full shadow-lg hover:bg-orange-500 dark:hover:bg-orange-400 focus:outline-none hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Right Navigation -->
+            <button
+              id="next-btn"
+              class="mx-2 absolute hover:scale-110 transition-transform duration-200 right-0 top-1/2 transform -translate-y-1/2 bg-gray-600 dark:bg-gray-500 text-white p-2 rounded-full shadow-lg hover:bg-orange-500 dark:hover:bg-orange-400 focus:outline-none hidden"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-10 w-10"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- Project Info -->
+          <h3
+            id="project-title"
+            class="inline text-2xl font-bold text-gray-800 dark:text-gray-100 border-b-2 border-orange-600 px-4 pb-2"
+          ></h3>
+          <p
+            id="project-duration"
+            class="text-md text-gray-600 dark:text-gray-400 italic text-right mt-4"
+          ></p>
+          <p
+            id="project-description"
+            class="text-left text-lg text-gray-700 dark:text-gray-300 mt-4"
+          ></p>
+          
+          <a
+            id="project-link"
+            target="_blank"
+            class="mt-4 px-5 pt-1 pb-2 border-2 border-orange-500 text-white font-semibold rounded-lg bg-orange-500 dark:bg-gradient-to-r from-orange-800 to-orange-500 transition-all hidden"
+          >
+            Visit GitHub <i class="fab fa-github text-2xl text-white"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-gray-100 dark:bg-gradient-to-tl from-gray-800 to-gray-900 pt-14">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center dark:text-orange-500 mb-10">Get in Touch</h2>
+    
+        <div class="max-w-3xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8 border-2 border-orange-400">
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 text-center">
+            Have questions or want to work together? Fill out the form below and I'll get back to you as soon as possible.
+          </p>
+    
+          <form id="contact-form" class="space-y-6">
+            <!-- Name Field -->
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name</label>
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                required 
+                placeholder="Your Name" 
+                class="w-full px-4 py-2 mt-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-900 dark:text-gray-300"
+              >
+            </div>
+    
+            <!-- Email Field -->
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                placeholder="Your Email" 
+                class="w-full px-4 py-2 mt-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-900 dark:text-gray-300"
+              >
+            </div>
+    
+            <!-- Message Field -->
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Message</label>
+              <textarea 
+                id="message" 
+                name="message" 
+                required 
+                rows="4" 
+                placeholder="Your Message" 
+                class="w-full px-4 py-2 mt-2 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-900 dark:text-gray-300"
+              ></textarea>
+            </div>
+    
+            <!-- Submit Button -->
+            <div class="text-center">
+              <button 
+                type="submit" 
+                class="px-6 py-2 text-white bg-orange-500 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-4 focus:ring-orange-300 dark:focus:ring-orange-700 transition-all"
+              >
+                Submit
+              </button>
+            </div>
+    
+            <!-- Response Message -->
+            <p id="response-message" class="text-center mt-4 text-lg font-medium hidden"></p>
+          </form>
+        </div>
+      </div>
+
+
+      <footer class="bg-gray-800 text-white py-8 mt-10">
+        <div class="max-w-screen-lg mx-auto px-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Social Links Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-orange-500">Follow On</h3>
+              <div class="flex space-x-4">
+                <a href="https://github.com/itsmesj" class="text-blue-400 hover:text-blue-100 hover:scale-125 transition-transform duration-200"><i class="fab fa-github text-2xl"></i></a>
+                <a href="https://www.linkedin.com/in/sahil-sharma-codes" class="text-blue-400 hover:text-blue-300 hover:scale-125 transition-transform duration-200"><i class="fab fa-linkedin-in text-2xl"></i></a>
+                <a href="https://wa.me/9319620274" class="text-blue-400 hover:text-green-400 hover:scale-125 transition-transform duration-200"><i class="fab fa-whatsapp text-2xl"></i></a>
+              </div>
+            </div>
+      
+            <!-- Address Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-2 text-orange-500">Location</h3>
+              <p class="italic">Sultanpuri, North West Delhi, Delhi-110086</p>
+            </div>
+      
+            <!-- Contact Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-orange-500">Contact On</h3>
+              <p><i class="fas fa-phone-alt mx-1 text-xl"></i> +91 9319 620 274</p>
+              <p class="pt-2"><i class="fas fa-envelope mx-1 text-xl"></i> sahilcc125@gmail.com</p>
+            </div>
+      
+            <!-- Additional Links Section -->
+            <div>
+              <h3 class="text-lg font-semibold mb-4 text-orange-500">Quick Links</h3>
+              <ul>
+                <li><a href="#" onclick="openModal('privacyPolicyModal')" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" onclick="openModal('termsOfUseModal')" class="text-gray-400 hover:text-white">Terms of Use</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Research Paper</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">About Me</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Projects</a></li>
+              </ul>
+            </div>
+      
+          </div>
+      
+          <!-- Footer Bottom Section -->
+          <div class="text-center mt-8 border-t-[1px] border-orange-700 pt-4">
+            <p>&copy; 2024 Sahil Sharma. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>      
+      
+      <!-- Privacy Policy Modal -->
+      <div id="privacyPolicyModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="modal-content bg-gray-400 text-black p-6 rounded-lg max-w-lg w-full">
+          <h2 class="text-2xl font-semibold mb-4">Privacy Policy</h2>
+          <p>Welcome to my personal portfolio. This Privacy Policy explains how I handle your data.</p>
+          <h3 class="font-semibold mt-4">Information Collection</h3>
+          <p>This website does not collect personal data. Cookies may be used for analytics.</p>
+          <h3 class="font-semibold mt-4">Data Usage</h3>
+          <p>Collected data is only used to improve the site and will not be shared.</p>
+          <h3 class="font-semibold mt-4">Contact</h3>
+          <p>If you have questions, contact me at <a href="mailto:sahilcc125@gmail.com" class="text-blue-800">sahilcc125@gmail.com</a>.</p>
+          <button onclick="closeModal('privacyPolicyModal')" class="mt-4 px-4 py-2 bg-red-700 text-white rounded-xl">Close</button>
+        </div>
+      </div>
+
+      <!-- Terms of Use Modal -->
+      <div id="termsOfUseModal" class="modal hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="modal-content bg-white text-black p-6 rounded-lg max-w-lg w-full">
+          <h2 class="text-2xl font-semibold mb-4">Terms of Use</h2>
+          <p>Welcome to my portfolio website. These terms govern your use of the site.</p>
+          <h3 class="font-semibold mt-4">Content Ownership</h3>
+          <p>All content, including projects and text, is my intellectual property.</p>
+          <h3 class="font-semibold mt-4">External Links</h3>
+          <p>Links to external sites are provided for reference. I am not responsible for their content.</p>
+          <h3 class="font-semibold mt-4">Disclaimer</h3>
+          <p>This site is provided "as is" and I am not liable for issues caused by its use.</p>
+          <button onclick="closeModal('termsOfUseModal')" class="mt-4 px-4 py-2 bg-red-700 text-white rounded-xl">Close</button>
+        </div>
+      </div>
+
+
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="scripts/script.js">
+      
+    </script>
+  </body>
+</html>
